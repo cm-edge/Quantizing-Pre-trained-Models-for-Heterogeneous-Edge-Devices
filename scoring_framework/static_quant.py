@@ -29,7 +29,7 @@ SEED = 42          # Deterministic seed for reproducible calibration subsets
 
 HF_CACHE_DIR = os.path.abspath("../data/huggingface_val")        # Directory for initial HuggingFace downloads/cache
 HF_SAVED_DIR = os.path.abspath("../data/hf_saved_datasets")      # Directory for locally stored datasets
-
+PATH_SET_DATA = "../data"             # Directory for local dataset fragments (parquet shards)
 
 def static_download(ctx: Context) -> None:
     """
@@ -133,7 +133,7 @@ def static_download(ctx: Context) -> None:
 
     try:
         # Strategy A: Prioritize localized, offline-capable HuggingFace dataset fragments
-        LOCAL_HF_DATASETS = Path(os.path.abspath("../data/hf_try1")) 
+        LOCAL_HF_DATASETS = Path(os.path.abspath(PATH_SET_DATA)) 
         parquet_dir = LOCAL_HF_DATASETS / "data"
 
         if hf_id == "imagenet-1k" and hf_split == "validation":

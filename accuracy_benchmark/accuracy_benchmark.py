@@ -40,7 +40,6 @@ MAX_SAMPLES = 1000                        # number of samples to eval (total wil
 MODEL_PATH = "../modelzoo/"
 
 
-# currently for streaming = True => IterableDataset, if dataset is downloaded HFImageNetDataset can inherit from Dataset
 class HFImageNetDataset(IterableDataset):
     def __init__(self, hf_ds, tfm, max_samples: int = None):
         self.ds = hf_ds
@@ -97,9 +96,7 @@ def topk_correct(logits: torch.Tensor, target: torch.Tensor, k: int = 5) -> int:
     Zählt, wie viele Targets in den Top-k Vorhersagen liegen.
     logits: (B, C), target: (B,)
     """
-    # topk returns (values, indices)
     _, pred = torch.topk(logits, k, dim=1)
-    # Vergleiche jede Zeile: target[b] in pred[b, :]
     correct = (pred == target.view(-1, 1)).any(dim=1).sum().item()
     return correct
 
@@ -117,9 +114,7 @@ def main(ctx: Context = None):
     if path is None:
         path = MODEL_PATH
 
-    # ALLOWED_MODELS = ["mobilenet_v3_small", "mnasnet0_5", "shufflenet_v2_x0_5", "mobilenet_v2", "regnet_x_400mf", "efficientnet_b0", "efficientnet_b2", "regnet_y_1_6gf", "resnet18", "efficientnet_b4", "regnet_x_3_2gf", "convnext_tiny","ConvNeXt_Base","vit_b_16"]
-    # 
-    ALLOWED_MODELS = ["mobilenet_v3_small", "mnasnet0_5", "shufflenet_v2_x0_5", "mobilenet_v2", "regnet_x_400mf", "regnet_y_1_6gf", "resnet18", "regnet_x_3_2gf","ConvNeXt_Base","vit_b_16"]	
+    ALLOWED_MODELS = ["mobilenet_v3_small", "mnasnet0_5", "shufflenet_v2_x0_5", "mobilenet_v2", "regnet_x_400mf",  "resnet18","ConvNeXt_Base","vit_b_16"]	
 
 
     if all == False:
@@ -142,11 +137,11 @@ def main(ctx: Context = None):
         for model_dir in sorted(p for p in root.iterdir() if p.is_dir()):
             model_name = model_dir.name
             
-            # Filtern der Modelle
+        
             if not any(model_name.startswith(allowed) for allowed in ALLOWED_MODELS):
                 continue
 
-            # TorchScript suchen, das NICHT "dict" im Namen hat
+        
             pt_path = next((p for p in model_dir.rglob("*.pt") if "dict" not in p.name.lower() and "state" not in p.name.lower()), None)
 
             if pt_path is None:
@@ -175,31 +170,28 @@ def benchmark(path, size,logger,logp):
     if "int8" in path_str.lower():
         device = torch.device("cpu") 
 
-    # 1) Modell laden (TorchScript INT8 -> CPU)
+    # 1)Load Model (TorchScript INT8 -> CPU)
     logger.info(f"Loading TorchScript model from: {path}")
     model = torch.jit.load(path, map_location= device)
     #activates inference mode, forecast gets deterministic, 
     model.eval()
     logger.info(f"Model loaded. Running on {device}.")
 
-    # 2) Dataset laden (HuggingFace)
+    # 2) Load dataset (HuggingFace)
     split_str = SUBSET if SUBSET is not None else SPLIT
     logger.info(f"Loading ImageNet-1k split from Hugging Face: {split_str}")
 
 
-    root = Path("/home/marceldavis/University/BA/FirstZoo/data/data") #     root = Path("../third_prot/data/hf_try1")
+    root = Path("/home/marceldavis/University/BA/FirstZoo/data/data") 
     files = sorted(str(p) for p in (root / "").glob("validation-*.parquet"))
 
-    hf_ds = load_dataset("parquet", data_files=files, split="train")#,cache_dir="/home/marceldavis/University/BA/FirstZoo/data/huggingfaceval") 
-    #hf_ds = load_dataset("imagenet-1k", split=split_str,streaming=True)#,cache_dir="/home/marceldavis/University/BA/FirstZoo/data/huggingfaceval")
-    #n_samples = len(hf_ds)
-    #print(f"[INFO] Dataset size: {n_samples} images")
+    hf_ds = load_dataset("parquet", data_files=files, split="train")#,cache_dir="/home/marceldavis/University/BA/
 
     # 3) Preprocessing + DataLoader
     preprocess = build_preprocess()
     ds = HFImageNetDataset(hf_ds, preprocess,max_samples=size)
 
-    # Collate: default stack reicht (x: (3,H,W), y: int)
+  
     loader = DataLoader(
         ds,
         batch_size=BATCH_SIZE,
@@ -210,20 +202,14 @@ def benchmark(path, size,logger,logp):
         #cache_dir="/home/marceldavis/University/BA/FirstZoo/data"
     )
 
-    # 4) Eval loop
     total = 0
     top1_correct = 0
     top5_correct = 0
 
-    #zw1 = None
-    #zw2 = None
-    #zw3 = None
 
     t0 = time()
     with torch.inference_mode():
-        #tqdm shows progress bar with iterations per second
-        for step_idx, (x, y) in enumerate(tqdm(loader, desc="Evaluating")):#, total=math.ceil(n_samples / BATCH_SIZE)):
-            # Modell ist CPU/INT8; keine .to('cuda') hier!
+        for step_idx, (x, y) in enumerate(tqdm(loader, desc="Evaluating")):
             x = x.to(device, non_blocking=True)
             y = y.to(device, non_blocking=True)
 
@@ -249,15 +235,6 @@ def benchmark(path, size,logger,logp):
             total += y.size(0)
             print(f"\r[INFO] Processed {total} samples...", end="", flush=True)
             
-            #zw1 = logits
-            #zw2 = x
-            #zw3 = y
-            #break
-    #print(zw1)
-    #print(zw2)
-    #print(zw3)
-
-    # Inference KPIs
     if timed_images > 0 and timed_seconds > 0:
         latency_ms_per_sample = (timed_seconds / timed_images) * 1000.0
         throughput_fps = timed_images / timed_seconds
@@ -298,7 +275,7 @@ def benchmark(path, size,logger,logp):
         "===========================================\n"
     )
 
-    # 'a' = append (anhängen) → erstellt die Datei, falls sie noch nicht existiert
+ 
     with open(log_path, "a", encoding="utf-8") as f:
         f.write(line)
 
@@ -306,20 +283,19 @@ def benchmark(path, size,logger,logp):
 
     ts_iso = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    # einfache Heuristik aus Dateiname
+
     p_lower = path_str.lower()
     precision = "int8" if "int8" in p_lower else "fp32"
     variant = "int8" if precision == "int8" else "fp32"
 
-    # quantization block ähnlich deinem Beispiel
+
     quant_block = None
     if precision == "int8":
-        quant_block = {"type": "static_or_qat", "engine": "fbgemm/qnnpack"}  # optional genauer aus metadata.json
+        quant_block = {"type": "static_or_qat", "engine": "fbgemm/qnnpack"} 
 
 
     record = {
-        "model_name": Path(path_str).parent.name,  # Ordnername als Model-Key
-        #"variant": variant,
+        "model_name": Path(path_str).parent.name,  
         "format": "torchscript",
         "precision": precision,
         "quantization": quant_block if precision != "fp32" else {"type": "None", "engine": "None"},
@@ -345,6 +321,7 @@ def benchmark(path, size,logger,logp):
             "TPU": {
                 "model": "Edge TPU",
                 "performance_tops": 4.0,
+                "tensor_cores": 4,
                 "version": "v2",
                 "accelerator": False,
             },
@@ -387,7 +364,6 @@ def benchmark(path, size,logger,logp):
     if device.type == "cuda":
         record["hardware"]["device_name"] = torch.cuda.get_device_name(0)
 
-    # wohin schreiben
     json_path = Path(logp) / "benchmark.json" if logp else Path("benchmark.json")
     append_json_record(json_path, record)
     logger.info(f"[INFO] JSON appended to {json_path}")

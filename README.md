@@ -37,7 +37,7 @@ mkdir modelzoo/
 Use `python main.py <command>` to run the tool. You can always add `-v` for more detailed terminal output.
 
 ### Recommend a Model
-Find the best model based on your hardware constraints (provided via a JSON file).
+Find the best model based on your hardware constraints (provided via a JSON file). Inoder to load a benchmarking database change the Variable PATH_TO_BENCHMARKDB in the main.py to the location of the database. The database should be one json array containing json objects, similar to the specified in the accuracy_benchmark/accuracy_benchmark.py file.
 ```bash
 python main.py recom --inputfile constraints.json
 ```
@@ -50,7 +50,7 @@ python main.py download --model resnet18 --modeldir modelzoo/ --static True
 *Options: `--normal True`, `--static True`, `--dynamic True`, `--qat True`, `--all True`*
 
 ### Benchmark Accuracy
-Test how accurate your downloaded models are.
+Test how accurate your downloaded models are. Before benchmarking adjust the hardwarespecs inside the accuracy_benchmark.py file.
 ```bash
 python main.py accbenchmark --modeldir modelzoo/ --samplesize 500 --logpath results.txt
 ```

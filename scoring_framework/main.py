@@ -53,6 +53,7 @@ Environment Initialization:
 TASK_CLASSIFICATION = "classification"
 DS_IMAGENET1K = "ImageNet-1K"
 DS_IMAGENET1K_SWAG = "ImageNet-1K (SWAG pretrain)"
+PATH_TO_BENCHMARKDB = "utility_files/modelbenchmark_db.json" # Adjust path if necessary
 
 # Model registry containing supported architectures, their corresponding pre-trained weights, task type, and dataset.
 MODEL_REGISTRY: Dict[str, Tuple[Callable[..., torch.nn.Module], str, str, str]] = {
@@ -219,7 +220,7 @@ def recomStart(ctx: object, args: argparse.Namespace):
 
     # 2. Load benchmark database
     logger.info("Loading model benchmark database...")
-    db_path = Path("utility_files/modelbenchmark_db.json") # Adjust path if necessary
+    db_path = Path(PATH_TO_BENCHMARKDB) # Adjust path if necessary
     with db_path.open("r", encoding="utf-8") as f:
         benchDB = json.load(f)
 
