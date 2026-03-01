@@ -1,0 +1,68 @@
+{
+    "model": {
+        "filter": false,
+        "name": "",
+        "variant": "", 
+        "quantization": "",  
+        "precision": "",  
+        "format": "", 
+        "artifact_path": ""
+    },
+    
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 3 Model B",
+      "CPU": {
+        "model": "ARM Cortex-A53",
+        "cores": 4,
+        "base_clock": "1.2 GHz",
+        "max_clock": "1.2 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "1GB",
+        "type": "LPDDR2",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card",
+        "capacity": "32GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    
+    "metrics": {
+        "accuracy": 60,
+        "inference_speed": 40,
+        "storage_consumption": 0,
+        "throughput":0
+    },
+
+    "constraints": {
+        "accuracy": 60,
+        "latency": 10000,
+        "throughput":0,
+        "storage": 1000
+    },
+
+    "additional_info": {
+        "timestamp": "2025-10-24T17:55:13Z",
+        "torch_version": "2.6.0",
+        "torchvision_version": "0.20.0",
+        "os": "Ubuntu 22.04"
+    }
+}

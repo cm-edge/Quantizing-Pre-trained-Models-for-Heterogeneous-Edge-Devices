@@ -1,0 +1,193 @@
+[
+    {
+        "model_name": "Model A",
+        "format": "torchscript",
+        "precision": "fp32",
+        "quantization": {
+            "type": "None",
+            "engine": "None"
+        },
+        "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 3 Model B",
+      "CPU": {
+        "model": "ARM Cortex-A53",
+        "cores": 4,
+        "base_clock": "1.2 GHz",
+        "max_clock": "1.2 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "1GB",
+        "type": "LPDDR2",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card",
+        "capacity": "32GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+        "benchmark": {
+            "dataset": "imagenet_val_subset50000",
+            "batch_size": 64,
+            "latency_ms_per_sample": 10.0,
+            "throughput_fps": 100.0,
+            "accuracy_top1": 0.65,
+            "accuracy_top5": 0.80,
+            "num_samples_eval": 50000
+        },
+        "artifact": {
+            "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small/mobilenet_v3_small_ts.pt",
+            "disk_size_mb": 5.0
+        },
+        "env": {
+            "torch": "2.4.1",
+            "torchvision": "unknown",
+            "os": "Linux-6.1-x86_64"
+        },
+        "timestamp": "2026-02-06T18:24:50Z"
+    },
+    {
+        "model_name": "Model B",
+        "format": "torchscript",
+        "precision": "fp32",
+        "quantization": {
+            "type": "None",
+            "engine": "None"
+        },
+        "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 3 Model B",
+      "CPU": {
+        "model": "ARM Cortex-A53",
+        "cores": 4,
+        "base_clock": "1.2 GHz",
+        "max_clock": "1.2 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "1GB",
+        "type": "LPDDR2",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card",
+        "capacity": "32GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+        "benchmark": {
+            "dataset": "imagenet_val_subset50000",
+            "batch_size": 64,
+            "latency_ms_per_sample": 50,
+            "throughput_fps": 20,
+            "accuracy_top1": 0.85,
+            "accuracy_top5": 0.95,
+            "num_samples_eval": 50000
+        },
+        "artifact": {
+            "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small/mobilenet_v3_small_ts.pt",
+            "disk_size_mb": 100
+        },
+        "env": {
+            "torch": "2.4.1",
+            "torchvision": "unknown",
+            "os": "Linux-6.1-x86_64"
+        },
+        "timestamp": "2026-02-06T18:24:50Z"
+    },
+    {
+        "model_name": "Model C",
+        "format": "torchscript",
+        "precision": "fp32",
+        "quantization": {
+            "type": "None",
+            "engine": "None"
+        },
+        "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+        "benchmark": {
+            "dataset": "imagenet_val_subset50000",
+            "batch_size": 64,
+            "latency_ms_per_sample": 25,
+            "throughput_fps": 40.0,
+            "accuracy_top1": 0.75,
+            "accuracy_top5": 0.90,
+            "num_samples_eval": 50000
+        },
+        "artifact": {
+            "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small/mobilenet_v3_small_ts.pt",
+            "disk_size_mb": 25.0
+        },
+        "env": {
+            "torch": "2.4.1",
+            "torchvision": "unknown",
+            "os": "Linux-6.1-x86_64"
+        },
+        "timestamp": "2026-02-06T18:24:50Z"
+    }
+]

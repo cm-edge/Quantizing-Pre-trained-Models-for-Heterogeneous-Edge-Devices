@@ -1,0 +1,67 @@
+{
+    "model": {
+        "filter": false,
+        "name": "",
+        "variant": "", 
+        "quantization": "",  
+        "precision": "",  
+        "format": "", 
+        "artifact_path": ""
+    },
+    "hardware": {
+    "DEVICE_NAME": "Midrange Notebook",
+    "CPU": {
+        "model": "Intel Core i7-9750H",
+        "cores": 6,
+        "base_clock": "2.6 GHz",
+        "max_clock": "4.5 GHz",
+        "architecture": "x86_64"
+    },
+    "CPU_ONLY": false,
+    "GPU": {
+        "model": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "vram": "6GB",
+        "cuda_cores": 3840,
+        "tensor_cores": 120,
+        "cuda_version": "11.8",
+        "driver_version": "535.104"
+    },
+    "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+    },
+    "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+    },
+    "Storage": {
+        "type": "NVMe SSD",
+        "capacity": "1TB",
+        "speed": "3.5 GB/s"
+    }
+    },
+    
+    "metrics": {
+        "accuracy": 20,
+        "inference_speed": 80,
+        "storage_consumption": 0,
+        "throughput":0
+    },
+
+    "constraints": {
+        "accuracy": 55,
+        "latency": 15,
+        "throughput":1,
+        "storage": 1000
+    },
+
+    "additional_info": {
+        "timestamp": "2025-10-24T17:55:13Z",
+        "torch_version": "2.6.0",
+        "torchvision_version": "0.20.0",
+        "os": "Ubuntu 22.04"
+    }
+}
