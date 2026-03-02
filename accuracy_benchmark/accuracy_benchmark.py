@@ -185,7 +185,7 @@ def benchmark(path, size,logger,logp):
     root = Path("/home/marceldavis/University/BA/FirstZoo/data/data") 
     files = sorted(str(p) for p in (root / "").glob("validation-*.parquet"))
 
-    hf_ds = load_dataset("parquet", data_files=files, split="train")#,cache_dir="/home/marceldavis/University/BA/
+    hf_ds = load_dataset("parquet", data_files=files, split="validation")#,cache_dir="/home/marceldavis/University/BA/
 
     # 3) Preprocessing + DataLoader
     preprocess = build_preprocess()
