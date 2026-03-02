@@ -37,7 +37,7 @@ mkdir modelzoo/
 Use `python main.py <command>` to run the tool. You can always add `-v` for more detailed terminal output.
 
 ### Recommend a Model
-Find the best model based on your hardware constraints (provided via a JSON file). Inoder to load a benchmarking database change the Variable PATH_TO_BENCHMARKDB in the main.py to the location of the database. The database should be one json array containing json objects, similar to the specified in the accuracy_benchmark/accuracy_benchmark.py file.
+Find the best model based on your hardware constraints (provided via a JSON file). Inoder to load a benchmarking database change the Variable PATH_TO_BENCHMARKDB in the main.py to the location of the database. It's recommended to place it in the utilit_files/ folder. A template for the input as well as the input file and database for the proof of concept section in chapter 4 is included. The database should be one json array containing json objects, similar to the specified in the accuracy_benchmark/accuracy_benchmark.py file.
 ```bash
 python main.py recom --inputfile constraints.json
 ```
