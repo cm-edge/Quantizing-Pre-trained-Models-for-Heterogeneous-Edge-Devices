@@ -124,10 +124,10 @@ def static_download(ctx: Context) -> None:
 
     # Map architectural display name -> HuggingFace Dataset ID + Split
     DATASET_MAP = {
-        "ImageNet-1K": ("imagenet-1k", "validation"),
+        "ImageNet-1K": ("imagenet-1k", "train"),
     }
 
-    hf_id, hf_split = DATASET_MAP.get(dataset_name, (dataset_name, "validation"))
+    hf_id, hf_split = DATASET_MAP.get(dataset_name, (dataset_name, "train"))
 
     logger.info(f"Calibration Dataset mapped: {dataset_name} -> HF='{hf_id}', split='{hf_split}', samples={calib_images}, seed={calib_seed}")
 
@@ -136,13 +136,13 @@ def static_download(ctx: Context) -> None:
         LOCAL_HF_DATASETS = Path(os.path.abspath(PATH_SET_DATA)) 
         parquet_dir = LOCAL_HF_DATASETS / "data"
 
-        if hf_id == "imagenet-1k" and hf_split == "validation":
-            files = sorted(str(p) for p in parquet_dir.glob("validation-*.parquet"))
+        if hf_id == "imagenet-1k" and hf_split == "train":
+            files = sorted(str(p) for p in parquet_dir.glob("train-*.parquet"))
             if not files:
                 raise FileNotFoundError(
-                    f"No validation-*.parquet shards found in {parquet_dir}. "
+                    f"No train-*.parquet shards found in {parquet_dir}. "
                     f"Please ensure prior execution of:\n"
-                    f"  hf download imagenet-1k --repo-type dataset --include \"data/validation-*.parquet\" "
+                    f"  hf download imagenet-1k --repo-type dataset --include \"data/train-*.parquet\" "
                     f"--local-dir {LOCAL_HF_DATASETS}"
                 )
 

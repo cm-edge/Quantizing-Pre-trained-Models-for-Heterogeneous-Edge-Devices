@@ -1,0 +1,3170 @@
+[
+  {
+    "model_name": "mobilenet_v3_small",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 6.80547,
+      "throughput_fps": 147.0587,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.67431,
+      "accuracy_top5": 0.876183,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small/mobilenet_v3_small_ts.pt",
+      "disk_size_mb": 10.099
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 55.20305,
+      "throughput_fps": 18.114603,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.508524,
+      "accuracy_top5": 0.7854391,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small_dynamic/mobilenet_v3_small_qat_int8_dynamic_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 18.501021,
+      "throughput_fps": 54.05381,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5162377,
+      "accuracy_top5": 0.76375,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small_qat/mobilenet_v3_small_qat_int8_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 17.909419,
+      "throughput_fps": 55.86989,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5118441,
+      "accuracy_top5": 0.761765,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small_static/mobilenet_v3_small_qat_int8_statuc_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 8.50556,
+      "throughput_fps": 117.64295,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6784,
+      "accuracy_top5": 0.874425,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5/mnasnet0_5_ts.pt",
+      "disk_size_mb": 8.877
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 85.30086,
+      "throughput_fps": 11.720595,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.67034,
+      "accuracy_top5": 0.8780374,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5_dynamic/mnasnet0_5_dynamic_int8_ts.pt",
+      "disk_size_mb": 5.231
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 64.80065,
+      "throughput_fps": 15.434279,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.64201,
+      "accuracy_top5": 0.85792,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5_qat/mnasnet0_5_qat_int8_ts.pt",
+      "disk_size_mb": 2.591
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 62.505548,
+      "throughput_fps": 16.00144,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.53278,
+      "accuracy_top5": 0.760751,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5_static/mnasnet0_5_static_int8_ts.pt",
+      "disk_size_mb": 2.595
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 6.2028895,
+      "throughput_fps": 161.2968828,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.603487,
+      "accuracy_top5": 0.819107,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5/shufflenet_v2_x0_5_ts.pt",
+      "disk_size_mb": 5.642
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 62.10414,
+      "throughput_fps": 16.106921,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.60826,
+      "accuracy_top5": 0.8190196,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5_dynamic/shufflenet_v2_x0_5_int8_dynamic_ts.pt",
+      "disk_size_mb": 5.642
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 32.101716,
+      "throughput_fps": 31.153753,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.56972,
+      "accuracy_top5": 0.789404,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5_qat/shufflenet_v2_x0_5_qat_int8_ts.pt",
+      "disk_size_mb": 1.712
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 30.5002819,
+      "throughput_fps": 32.783702,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5587581,
+      "accuracy_top5": 0.789442,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5_static/shufflenet_v2_x0_5_ts.pt",
+      "disk_size_mb": 5.642
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 25.40596,
+      "throughput_fps": 39.3718572,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7783222,
+      "accuracy_top5": 0.93478,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0/efficientnet_b0_ts.pt",
+      "disk_size_mb": 20.893
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 210.306792,
+      "throughput_fps": 4.75077,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.77412,
+      "accuracy_top5": 0.93346,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0_dynamic/efficientnet_b0_dynamic_int8_ts.pt",
+      "disk_size_mb": 17.258
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 115.8086291,
+      "throughput_fps": 8.6303702,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6667566,
+      "accuracy_top5": 0.87455,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0_qat/efficientnet_b0_qat_int8_ts.pt",
+      "disk_size_mb": 6.234
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 112.1021,
+      "throughput_fps": 8.92745,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.614768,
+      "accuracy_top5": 0.809479,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0_static/efficientnet_b0_static_int8_ts.pt",
+      "disk_size_mb": 6.243
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 22.4000564,
+      "throughput_fps": 44.6451744,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.725019,
+      "accuracy_top5": 0.9176393,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf/regnet_x_400mf_ts.pt",
+      "disk_size_mb": 21.668
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 145.2078,
+      "throughput_fps": 6.88965,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7245077,
+      "accuracy_top5": 0.9170736,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf_dynamic/regnet_x_400mf_dynamic_int8_ts.pt",
+      "disk_size_mb": 20.542
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 68.5053285,
+      "throughput_fps": 14.5953123,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6669112,
+      "accuracy_top5": 0.876586,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf_qat/regnet_x_400mf_qat_int8_ts.pt",
+      "disk_size_mb": 6.035
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 66.80135,
+      "throughput_fps": 14.97987,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.71729,
+      "accuracy_top5": 0.9049471,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf_static/regnet_x_400mf_static_int8_ts.pt",
+      "disk_size_mb": 6.043
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 16.207446,
+      "throughput_fps": 61.722889,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7191064,
+      "accuracy_top5": 0.903375,
+      "num_samples_eval": 39286
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2/mobilenet_v2_ts.pt",
+      "disk_size_mb": 13.876
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 125.407992,
+      "throughput_fps": 7.978093,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.714078,
+      "accuracy_top5": 0.90484,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2_dynamic/mobilenet_v2_dynamic_int8_ts.pt",
+      "disk_size_mb": 10.231
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 34.505178,
+      "throughput_fps": 28.9878732,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6239712,
+      "accuracy_top5": 0.85212,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2_qat/mobilenet_v2_qat_int8_ts.pt",
+      "disk_size_mb": 4.012
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 33.109395,
+      "throughput_fps": 30.2102,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5924797,
+      "accuracy_top5": 0.8242677,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2_static/mobilenet_v2_static_int8_ts.pt",
+      "disk_size_mb": 4.016
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 45.607306,
+      "throughput_fps": 21.92418,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7725926,
+      "accuracy_top5": 0.93275,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2/efficientnet_b2_ts.pt",
+      "disk_size_mb": 35.8
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 380.400839,
+      "throughput_fps": 2.62205,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.77766,
+      "accuracy_top5": 0.934882,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2_dynamic/efficientnet_b2_dynamic_int8_ts.pt",
+      "disk_size_mb": 31.808
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 195.8051153,
+      "throughput_fps": 5.10768,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.63834,
+      "accuracy_top5": 0.85288,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2_qat/efficientnet_b2_qat_int8_ts.pt",
+      "disk_size_mb": 10.474
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 188.5018281,
+      "throughput_fps": 5.3042,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.64074,
+      "accuracy_top5": 0.843908,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2_static/efficientnet_b2_static_int8_ts.pt",
+      "disk_size_mb": 10.492
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 24.20855,
+      "throughput_fps": 41.3202146,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6979467,
+      "accuracy_top5": 0.892443,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18/resnet18_ts.pt",
+      "disk_size_mb": 44.757
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 215.4063675,
+      "throughput_fps": 4.6499584,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6998951,
+      "accuracy_top5": 0.899479,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18_dynamic/resnet18_dynamic_int8_ts.pt",
+      "disk_size_mb": 43.3
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 102.5035692,
+      "throughput_fps": 9.757779,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6682342,
+      "accuracy_top5": 0.87421,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18_qat/resnet18_qat_int8_ts.pt",
+      "disk_size_mb": 11.363
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 100.20046,
+      "throughput_fps": 9.984998,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6987964,
+      "accuracy_top5": 0.88843,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18_static/resnet18_static_int8_ts.pt",
+      "disk_size_mb": 11.366
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 112.206403,
+      "throughput_fps": 8.916135,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.790475,
+      "accuracy_top5": 0.949508,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4/efficientnet_b4_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 850.4045092,
+      "throughput_fps": 1.173399,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.798407,
+      "accuracy_top5": 0.9480558,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4_dynamic/efficientnet_b4_int8_dynamicts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 460.20661,
+      "throughput_fps": 2.17888,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7998885,
+      "accuracy_top5": 0.9428143,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4_qat/efficientnet_b4_int8_qat_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 440.501628,
+      "throughput_fps": 2.27509,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.79743,
+      "accuracy_top5": 0.94619,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4_static/efficientnet_b4_int8_static_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 65.4067397,
+      "throughput_fps": 15.29408,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.827644,
+      "accuracy_top5": 0.95878,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny/convnext_tiny_ts.pt",
+      "disk_size_mb": 109.378
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 480.501839,
+      "throughput_fps": 2.0889795,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.823341,
+      "accuracy_top5": 0.95377,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny_dynamic/convnext_tiny_dynamic_int8_ts.pt",
+      "disk_size_mb": 33.242
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 445.20637,
+      "throughput_fps": 2.242396,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7707274,
+      "accuracy_top5": 0.9326199,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny_qat/convnext_tiny_qat_int8_ts.pt",
+      "disk_size_mb": 27.926
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 458.101896,
+      "throughput_fps": 2.187115,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.743436,
+      "accuracy_top5": 0.92822,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny_static/convnext_tiny_static_int8_ts.pt",
+      "disk_size_mb": 28.597
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 285.4066342,
+      "throughput_fps": 3.5090285,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.849586,
+      "accuracy_top5": 0.96049,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base/convnext_base_ts.pt",
+      "disk_size_mb": 338.1
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 2150.203445,
+      "throughput_fps": 0.46174,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8364942,
+      "accuracy_top5": 0.961454,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_dynamic/convnext_base_int8_dynamic_ts.pt",
+      "disk_size_mb": 92.5
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1995.8008265,
+      "throughput_fps": 0.506794,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.839254,
+      "accuracy_top5": 0.96734,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_qat/convnext_base_int8_qat_ts.pt",
+      "disk_size_mb": 88.7
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1980.40034,
+      "throughput_fps": 0.508576,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.83326,
+      "accuracy_top5": 0.962229,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_static/convnext_base_int8_static_ts.pt",
+      "disk_size_mb": 88.7
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 450.50437,
+      "throughput_fps": 2.22476,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8112834,
+      "accuracy_top5": 0.956625,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16/vit_b_16_ts.pt",
+      "disk_size_mb": 330.285
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1650.50703,
+      "throughput_fps": 0.602065,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.809401,
+      "accuracy_top5": 0.9582962,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16_dynamic/vit_b_16_dynamic_int8_ts.pt",
+      "disk_size_mb": 91.423
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1420.10682,
+      "throughput_fps": 0.702652,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.807016,
+      "accuracy_top5": 0.9440073,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16_qat/vit_b_16_qat_int8_ts.pt",
+      "disk_size_mb": 86.741
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "NVIDIA Jetson Nano 4GB",
+      "CPU": {
+        "model": "Quad-Core ARM Cortex-A57",
+        "cores": 4,
+        "base_clock": "1.43 GHz",
+        "max_clock": "1.43 GHz",
+        "architecture": "ARM64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Maxwell GPU",
+        "vram": "4GB (Shared Unified Memory)",
+        "cuda_cores": 128,
+        "tensor_cores": 0,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "4GB",
+        "type": "LPDDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "MicroSD",
+        "capacity": "",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1380.40468,
+      "throughput_fps": 0.72207,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.79547,
+      "accuracy_top5": 0.949093,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16_static/vit_b_16_static_int8_ts.pt",
+      "disk_size_mb": 86.752
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-4.9-tegra-aarch64"
+    },
+    "timestamp": null
+  }
+]

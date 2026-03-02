@@ -1,0 +1,3170 @@
+[
+  {
+    "model_name": "mobilenet_v3_small",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.09724086993366432,
+      "throughput_fps": 10283.741812287148,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.67668,
+      "accuracy_top5": 0.87412,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small/mobilenet_v3_small_ts.pt",
+      "disk_size_mb": 10.099
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 5.528999923,
+      "throughput_fps": 170.73923897234,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.50773,
+      "accuracy_top5": 0.73555,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small_dynamic/mobilenet_v3_small_dynamic_int8_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 4.825000529703887,
+      "throughput_fps": 207.25386325737267,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.51776,
+      "accuracy_top5": 0.76066,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small_qat/mobilenet_v3_small_qat_int8_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 4.3482789435,
+      "throughput_fps": 202.237747587,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.51351,
+      "accuracy_top5": 0.76177,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small_static/mobilenet_v3_small_static_int8_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.16545969602950336,
+      "throughput_fps": 6043.7679023759865,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.67764,
+      "accuracy_top5": 0.8748,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5/mnasnet0_5_ts.pt",
+      "disk_size_mb": 8.877
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 6.7099790738208664,
+      "throughput_fps": 149.03176135101856,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.67746,
+      "accuracy_top5": 0.87454,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5_dynamic/mnasnet0_5_dynamic_int8_ts.pt",
+      "disk_size_mb": 5.231
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 4.445371727628601,
+      "throughput_fps": 224.9530660810347,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6484,
+      "accuracy_top5": 0.85788,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5_qat/mnasnet0_5_qat_int8_ts.pt",
+      "disk_size_mb": 2.591
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 4.782303270318466,
+      "throughput_fps": 209.10426283639,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5293,
+      "accuracy_top5": 0.75954,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5_static/mnasnet0_5_static_int8_ts.pt",
+      "disk_size_mb": 2.595
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.09225996124187721,
+      "throughput_fps": 10838.938002350857,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.60562,
+      "accuracy_top5": 0.81734,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5/shufflenet_v2_x0_5_ts.pt",
+      "disk_size_mb": 5.642
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 3.17768830677161,
+      "throughput_fps": 430.1070912984231,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.60386,
+      "accuracy_top5": 0.81656,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5_dynamic/shufflenet_v2_x0_5_dynamic_int8_ts.pt",
+      "disk_size_mb": 2.726
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.109982367682956,
+      "throughput_fps": 576.6953914996452,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.56202,
+      "accuracy_top5": 0.78584,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5_qat/shufflenet_v2_x0_5_qat_int8_ts.pt",
+      "disk_size_mb": 1.712
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.810170828240313,
+      "throughput_fps": 590.1119790728878,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.55994,
+      "accuracy_top5": 0.78186,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5_static/shufflenet_v2_x0_5_static_int8_ts.pt",
+      "disk_size_mb": 1.715
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.4000590907202827,
+      "throughput_fps": 2499.630737548194,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.77668,
+      "accuracy_top5": 0.93584,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0/efficientnet_b0_ts.pt",
+      "disk_size_mb": 20.893
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 19.638969927978206,
+      "throughput_fps": 50.91916753614317,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.77648,
+      "accuracy_top5": 0.93588,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0_dynamic/efficientnet_b0_dynamic_int8_ts.pt",
+      "disk_size_mb": 17.258
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 8.481943079430891,
+      "throughput_fps": 117.8975136516828,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.65844,
+      "accuracy_top5": 0.87122,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0_qat/efficientnet_b0_qat_int8_ts.pt",
+      "disk_size_mb": 6.234
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 8.058606551273241,
+      "throughput_fps": 124.09093230168959,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.610009234,
+      "accuracy_top5": 0.804234789345,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0_static/efficientnet_b0_static_int8_ts.pt",
+      "disk_size_mb": 6.243
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.22164722859571523,
+      "throughput_fps": 4511.673826628354,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7282,
+      "accuracy_top5": 0.90968,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf/regnet_x_400mf_ts.pt",
+      "disk_size_mb": 21.668
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 8.733849210631636,
+      "throughput_fps": 114.49705346214462,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7282,
+      "accuracy_top5": 0.90958,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf_dynamic/regnet_x_400mf_dynamic_int8_ts.pt",
+      "disk_size_mb": 20.542
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 4.778936433331402,
+      "throughput_fps": 209.25158012677286,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.66022,
+      "accuracy_top5": 0.87134,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf_qat/regnet_x_400mf_qat_int8_ts.pt",
+      "disk_size_mb": 6.035
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 4.871082224323746,
+      "throughput_fps": 205.2931882378213,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7187,
+      "accuracy_top5": 0.9058,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf_static/regnet_x_400mf_static_int8_ts.pt",
+      "disk_size_mb": 6.043
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.3214405210697709,
+      "throughput_fps": 3110.9954546861354,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.71864,
+      "accuracy_top5": 0.90308,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2/mobilenet_v2_ts.pt",
+      "disk_size_mb": 13.876
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 14.108022293990745,
+      "throughput_fps": 70.88165719910621,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.71868,
+      "accuracy_top5": 0.90294,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2_dynamic/mobilenet_v2_dynamic_int8_ts.pt",
+      "disk_size_mb": 10.231
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 6.377944139082842,
+      "throughput_fps": 156.79033528565859,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.62388,
+      "accuracy_top5": 0.84962,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2_qat/mobilenet_v2_qat_int8_ts.pt",
+      "disk_size_mb": 4.012
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 5.830182890961136,
+      "throughput_fps": 171.52120588710122,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.59334,
+      "accuracy_top5": 0.8202,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2_static/mobilenet_v2_static_int8_ts.pt",
+      "disk_size_mb": 4.016
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.6053851278507767,
+      "throughput_fps": 1651.841041338718,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.77776,
+      "accuracy_top5": 0.93736,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2/efficientnet_b2_ts.pt",
+      "disk_size_mb": 35.8
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 25.01235790970629,
+      "throughput_fps": 39.98023711358857,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.77782,
+      "accuracy_top5": 0.9374,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2_dynamic/efficientnet_b2_dynamic_int8_ts.pt",
+      "disk_size_mb": 31.808
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 11.531286548685145,
+      "throughput_fps": 86.72059234483467,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.63918,
+      "accuracy_top5": 0.85458,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2_qat/efficientnet_b2_qat_int8_ts.pt",
+      "disk_size_mb": 10.474
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 11.91431503748932,
+      "throughput_fps": 83.93264714366055,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.64474,
+      "accuracy_top5": 0.87666,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2_static/efficientnet_b2_static_int8_ts.pt",
+      "disk_size_mb": 10.492
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.2222658067509748,
+      "throughput_fps": 4499.117586360882,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.69756,
+      "accuracy_top5": 0.89076,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18/resnet18_ts.pt",
+      "disk_size_mb": 44.757
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 8.876948838456626,
+      "throughput_fps": 112.6513195240926,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.69696,
+      "accuracy_top5": 0.89104,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18_dynamic/resnet18_dynamic_int8_ts.pt",
+      "disk_size_mb": 43.3
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 5.370318347321232,
+      "throughput_fps": 186.20870036481355,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.66108,
+      "accuracy_top5": 0.87132,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18_qat/resnet18_qat_int8_ts.pt",
+      "disk_size_mb": 11.363
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 5.353888917276441,
+      "throughput_fps": 186.78011730372373,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.69236,
+      "accuracy_top5": 0.88794,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18_static/resnet18_static_int8_ts.pt",
+      "disk_size_mb": 11.366
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.0570410801016767,
+      "throughput_fps": 946.037026208868,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.79268,
+      "accuracy_top5": 0.94534,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4/efficientnet_b4_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 7.53776025714506,
+      "throughput_fps": 19.40324909368491,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7926,
+      "accuracy_top5": 0.94508,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4_dynamic/efficientnet_b4_dynamic_int8_ts.pt",
+      "disk_size_mb": 70.279
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 18.684162820978823,
+      "throughput_fps": 53.521263413375245,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.783523,
+      "accuracy_top5": 0.93883755,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4_qat/efficientnet_b4_qat_int8_ts.pt",
+      "disk_size_mb": 19.843
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 18.44776468096532,
+      "throughput_fps": 54.20710949504983,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7818452625,
+      "accuracy_top5": 0.94879395834,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4_static/efficientnet_b4_static_int8_ts.pt",
+      "disk_size_mb": 21.341
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.0070142730614604,
+      "throughput_fps": 993.0345842664809,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.82134,
+      "accuracy_top5": 0.95946,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny/convnext_tiny_ts.pt",
+      "disk_size_mb": 109.378
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 25.506012139305017,
+      "throughput_fps": 39.20644256492728,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8204,
+      "accuracy_top5": 0.95916,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny_dynamic/convnext_tiny_dynamic_int8_ts.pt",
+      "disk_size_mb": 33.242
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 23.1378806050081,
+      "throughput_fps": 43.21917020280389,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.77128,
+      "accuracy_top5": 0.93648,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny_qat/convnext_tiny_qat_int8_ts.pt",
+      "disk_size_mb": 27.926
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm/qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 25.018909002463793,
+      "throughput_fps": 39.96976846198701,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.74394,
+      "accuracy_top5": 0.92314,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny_static/convnext_tiny_static_int8_ts.pt",
+      "disk_size_mb": 28.597
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 3.221458210526316,
+      "throughput_fps": 310.41842,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8402,
+      "accuracy_top5": 0.9684,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base/convnext_base_ts.pt",
+      "disk_size_mb": 338.124
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 26.852109375,
+      "throughput_fps": 37.2408,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8091,
+      "accuracy_top5": 0.9372,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_dynamic/convnext_base_dynamic_int8_ts.pt",
+      "disk_size_mb": 92.458
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 24.12453125,
+      "throughput_fps": 41.4516,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8384,
+      "accuracy_top5": 0.9671,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_qat/convnext_base_qat_int8_ts.pt",
+      "disk_size_mb": 88.692
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 23.90421875,
+      "throughput_fps": 41.8336,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8315,
+      "accuracy_top5": 0.9612,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_static/convnext_base_static_int8_ts.pt",
+      "disk_size_mb": 88.701
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 2.851240321052632,
+      "throughput_fps": 350.72456,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.81072,
+      "accuracy_top5": 0.95318,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16/vit_b_16_ts.pt",
+      "disk_size_mb": 330.285
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 29.452109375,
+      "throughput_fps": 33.95342,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.80914,
+      "accuracy_top5": 0.95202,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16_dynamic/vit_b_16_dynamic_int8_ts.pt",
+      "disk_size_mb": 91.423
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 27.21453125,
+      "throughput_fps": 36.74492,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.80425,
+      "accuracy_top5": 0.94891,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16_qat/vit_b_16_qat_int8_ts.pt",
+      "disk_size_mb": 86.741
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Server Nvidia A40",
+      "CPU": {
+        "model": "2x AMD EPYC 7302 16-Core Processor",
+        "cores": 32,
+        "base_clock": "3.00 GHz",
+        "max_clock": "3.3 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "used": true,
+        "model": "Nvidia A40",
+        "vram": "48GB",
+        "cuda_cores": 10752,
+        "tensor_cores": 336,
+        "cuda_version": "",
+        "driver_version": ""
+      },
+      "TPU": {
+        "used": false,
+        "model": "",
+        "performance_tops": 0.0,
+        "version": "",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "256GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "",
+        "capacity": "10000GB",
+        "speed": ""
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 26.90421875,
+      "throughput_fps": 37.16889,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.79641,
+      "accuracy_top5": 0.94312,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16_static/vit_b_16_static_int8_ts.pt",
+      "disk_size_mb": 86.752
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.9.6-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  }
+]

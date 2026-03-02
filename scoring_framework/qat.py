@@ -147,25 +147,25 @@ def qat_download(ctx: object) -> None:
     # DATASET PIPELINE (Local Parquet)
     # ---------------------------
     DATASET_MAP = {
-        "ImageNet-1K": ("imagenet-1k", "validation"),
+        "ImageNet-1K": ("imagenet-1k", "train"),
     }
-    hf_id, hf_split = DATASET_MAP.get(dataset_name, (dataset_name, "validation"))
+    hf_id, hf_split = DATASET_MAP.get(dataset_name, (dataset_name, "train"))
 
-    LOCAL_HF_ROOT = Path(os.path.abspath("../data/hf_try1"))
+    LOCAL_HF_ROOT = Path(os.path.abspath(DATASET_PATH))
     parquet_dir = LOCAL_HF_ROOT / "data"
 
-    if hf_id == "imagenet-1k" and hf_split == "validation":
-        parquet_files = sorted(str(p) for p in parquet_dir.glob("validation-*.parquet"))
+    if hf_id == "imagenet-1k" and hf_split == "train":
+        parquet_files = sorted(str(p) for p in parquet_dir.glob("train-*.parquet"))
         if not parquet_files:
             raise FileNotFoundError(
-                f"No validation-*.parquet files found in {parquet_dir}.\n"
+                f"No train-*.parquet files found in {parquet_dir}.\n"
                 f"Please execute the following command once:\n"
                 f"  hf download imagenet-1k --repo-type dataset "
-                f"--include \"data/validation-*.parquet\" --local-dir {LOCAL_HF_ROOT}"
+                f"--include \"data/train-*.parquet\" --local-dir {LOCAL_HF_ROOT}"
             )
 
         # Load local dataset from Parquet shards
-        dataset = load_dataset("parquet", data_files=parquet_files, split="validation")
+        dataset = load_dataset("parquet", data_files=parquet_files, split="train")
         # Ensure PIL Image decoding
         dataset = dataset.cast_column("image", HFImage(decode=True))
     else:

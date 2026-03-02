@@ -1,0 +1,3074 @@
+[
+  {
+    "model_name": "mobilenet_v3_small",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 26.2091369,
+      "throughput_fps": 38.1611065,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6799,
+      "accuracy_top5": 0.874727,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small/mobilenet_v3_small_ts.pt",
+      "disk_size_mb": 10.099
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 12.8057855,
+      "throughput_fps": 78.12788,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5057021,
+      "accuracy_top5": 0.789379,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small_dynamic/mobilenet_v3_small_int8_dynamic_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 10.200658,
+      "throughput_fps": 98.03203,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.51103,
+      "accuracy_top5": 0.7633427,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small_qat/mobilenet_v3_small_int8_qat_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 9.90788,
+      "throughput_fps": 101.019044,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.513387,
+      "accuracy_top5": 0.76019,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v3_small_static/mobilenet_v3_small_int8_static_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 35.20869,
+      "throughput_fps": 28.409333,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.67772,
+      "accuracy_top5": 0.8747477,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5/mnasnet0_5_ts.pt",
+      "disk_size_mb": 8.877
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 16.50044,
+      "throughput_fps": 60.6086116,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.67705,
+      "accuracy_top5": 0.87599,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5_dynamic/mnasnet0_5_int8_dynamic_ts.pt",
+      "disk_size_mb": 5.231
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 14.20865,
+      "throughput_fps": 70.42286,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6492767,
+      "accuracy_top5": 0.858502,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5_qat/mnasnet0_5_int8_qat_ts.pt",
+      "disk_size_mb": 2.591
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 13.900909,
+      "throughput_fps": 71.943091,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.531196,
+      "accuracy_top5": 0.7633609,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mnasnet0_5_static/mnasnet0_5_int8_static_ts.pt",
+      "disk_size_mb": 2.595
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 22.405301,
+      "throughput_fps": 44.6445494,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.605125,
+      "accuracy_top5": 0.8191046,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5/shufflenet_v2_x0_5_ts.pt",
+      "disk_size_mb": 5.642
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 10.50032,
+      "throughput_fps": 95.2320214,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.60942,
+      "accuracy_top5": 0.8154972,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5_dynamic/shufflenet_v2_x0_5_int8_dynamic_ts.pt",
+      "disk_size_mb": 5.642
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 8.90048,
+      "throughput_fps": 112.358662,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.569176,
+      "accuracy_top5": 0.788097,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5_qat/shufflenet_v2_x0_5_int8_qat_ts.pt",
+      "disk_size_mb": 1.712
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 8.700874,
+      "throughput_fps": 114.9441873,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5582117,
+      "accuracy_top5": 0.7879962,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/shufflenet_v2_x0_5_static/shufflenet_v2_x0_5_int8_static_ts.pt",
+      "disk_size_mb": 1.712
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 85.406,
+      "throughput_fps": 11.713419,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7701016,
+      "accuracy_top5": 0.93512,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0/efficientnet_b0_ts.pt",
+      "disk_size_mb": 20.893
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 38.20051,
+      "throughput_fps": 26.17741,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7709192,
+      "accuracy_top5": 0.9350382,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0_dynamic/efficientnet_b0_int8_dynamic_ts.pt",
+      "disk_size_mb": 17.258
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 35.1013,
+      "throughput_fps": 28.49623,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6630931,
+      "accuracy_top5": 0.87181,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0_qat/efficientnet_b0_int8_qat_ts.pt",
+      "disk_size_mb": 6.234
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 34.80707,
+      "throughput_fps": 28.733091,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6196728,
+      "accuracy_top5": 0.8025771,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b0_static/efficientnet_b0_static_int8_ts.pt",
+      "disk_size_mb": 6.243
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 68.20584,
+      "throughput_fps": 14.668036,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.72117,
+      "accuracy_top5": 0.91866,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf/regnet_x_400mf_ts.pt",
+      "disk_size_mb": 21.668
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 28.50919,
+      "throughput_fps": 35.08188,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.72193,
+      "accuracy_top5": 0.91667,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf_dynamic/regnet_x_400mf_int8_dynamic_ts.pt",
+      "disk_size_mb": 20.542
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 25.4037563,
+      "throughput_fps": 39.373696,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6608967,
+      "accuracy_top5": 0.87186,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf_qat/regnet_x_400mf_int8_qat_ts.pt",
+      "disk_size_mb": 6.035
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 25.103053,
+      "throughput_fps": 39.846534,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.71327,
+      "accuracy_top5": 0.90207,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/regnet_x_400mf_static/regnet_x_400mf_int8_static_ts.pt",
+      "disk_size_mb": 6.043
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 54.201121,
+      "throughput_fps": 18.45251,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7120851,
+      "accuracy_top5": 0.90884,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2/mobilenet_v2_ts.pt",
+      "disk_size_mb": 13.876
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 24.80013,
+      "throughput_fps": 40.3284272,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7183711,
+      "accuracy_top5": 0.902748,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2_dynamic/mobilenet_v2_int8_dynamic_ts.pt",
+      "disk_size_mb": 10.231
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 21.500717,
+      "throughput_fps": 46.5129852,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.62042,
+      "accuracy_top5": 0.85509,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2_qat/mobilenet_v2_int8_qat_ts.pt",
+      "disk_size_mb": 4.012
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 21.1092824,
+      "throughput_fps": 47.3976469,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5925,
+      "accuracy_top5": 0.8227732,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/mobilenet_v2_static/mobilenet_v2_int8_static_ts.pt",
+      "disk_size_mb": 4.016
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 165.2044694,
+      "throughput_fps": 6.05789,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7734366,
+      "accuracy_top5": 0.93653,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2/efficientnet_b2_ts.pt",
+      "disk_size_mb": 35.8
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 68.4057,
+      "throughput_fps": 14.61293,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7756475,
+      "accuracy_top5": 0.9390009,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2_dynamic/efficientnet_b2_int8_dynamic_ts.pt",
+      "disk_size_mb": 31.808
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 64.202135,
+      "throughput_fps": 15.57676,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.638067,
+      "accuracy_top5": 0.85715,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2_qat/efficientnet_b2_int8_qat_ts.pt",
+      "disk_size_mb": 10.474
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 62.80336,
+      "throughput_fps": 15.920821,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.64474,
+      "accuracy_top5": 0.8479304,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b2_static/efficientnet_b2_static_int8_ts.pt",
+      "disk_size_mb": 10.492
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 92.4071377,
+      "throughput_fps": 10.827506,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6957583,
+      "accuracy_top5": 0.894698,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18/resnet18_ts.pt",
+      "disk_size_mb": 44.757
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 45.101756,
+      "throughput_fps": 22.1703271,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6977122,
+      "accuracy_top5": 0.8980789,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18_dynamic/resnet18_int8_dynamic_ts.pt",
+      "disk_size_mb": 43.3
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 32.5019443,
+      "throughput_fps": 30.768417,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6678853,
+      "accuracy_top5": 0.874723,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18_qat/resnet18_int8_qat_ts.pt",
+      "disk_size_mb": 11.363
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 31.909568,
+      "throughput_fps": 31.342178,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.693522,
+      "accuracy_top5": 0.88319,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/resnet18_static/resnet18_int8_static_ts.pt",
+      "disk_size_mb": 11.366
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 385.207543,
+      "throughput_fps": 2.590015,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.79846,
+      "accuracy_top5": 0.945989,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4/efficientnet_b4_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 315.4081394,
+      "throughput_fps": 3.1728465,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7994179,
+      "accuracy_top5": 0.94554,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4_dynamic/efficientnet_b4_int8_dynamic_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 148.209845,
+      "throughput_fps": 6.740248,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.799569,
+      "accuracy_top5": 0.94016,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4_qat/efficientnet_b4_int8_qat_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 145.50004,
+      "throughput_fps": 6.8741699,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.79607,
+      "accuracy_top5": 0.942027,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/efficientnet_b4_static/efficientnet_b4_int8_static_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 310.40372,
+      "throughput_fps": 3.225,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.827105,
+      "accuracy_top5": 0.9593312,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny/convnext_tiny_ts.pt",
+      "disk_size_mb": 109.378
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 115.8072034,
+      "throughput_fps": 8.636886,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.828442,
+      "accuracy_top5": 0.95982,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny_dynamic/convnext_tiny_int8_dynamic_ts.pt",
+      "disk_size_mb": 33.242
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 108.4051111,
+      "throughput_fps": 9.2219256,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.778799,
+      "accuracy_top5": 0.93514,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny_qat/convnext_tiny_int8_qat_ts.pt",
+      "disk_size_mb": 27.926
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 110.10704,
+      "throughput_fps": 9.0817558,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7462621,
+      "accuracy_top5": 0.9213494,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_tiny_static/convnext_tiny_int8_static_ts.pt",
+      "disk_size_mb": 28.597
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1250.401509,
+      "throughput_fps": 0.794689,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8434017,
+      "accuracy_top5": 0.9690671,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base/convnext_base_ts.pt",
+      "disk_size_mb": 338.1
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 450.20111,
+      "throughput_fps": 2.22918,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.838644,
+      "accuracy_top5": 0.9676428,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_dynamic/convnext_base_int8_dynamic_ts.pt",
+      "disk_size_mb": 92.5
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 398.50788,
+      "throughput_fps": 2.5165111,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8323289,
+      "accuracy_top5": 0.963725,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_qat/convnext_base_int8_qat_ts.pt",
+      "disk_size_mb": 88.7
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 395.108898,
+      "throughput_fps": 2.5398578,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8304185,
+      "accuracy_top5": 0.96056,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_static/convnext_base_int8_static_ts.pt",
+      "disk_size_mb": 88.7
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 2150.507343,
+      "throughput_fps": 0.462516,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8119,
+      "accuracy_top5": 0.959296,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16/vit_b_16_ts.pt",
+      "disk_size_mb": 330.285
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 845.2054747,
+      "throughput_fps": 1.18952,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.80606,
+      "accuracy_top5": 0.958061,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16_dynamic/vit_b_16_int8_dynamic_ts.pt",
+      "disk_size_mb": 91.423
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 780.401449,
+      "throughput_fps": 1.2835,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.809973,
+      "accuracy_top5": 0.9477918,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16_qat/vit_b_16_int8_qat_ts.pt",
+      "disk_size_mb": 86.741
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "qnnpack"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Raspberry Pi 5 BCM2712 ARM Cortex-A76",
+      "CPU": {
+        "model": "Broadcom BCM2712",
+        "cores": 4,
+        "base_clock": "2.4 GHz",
+        "max_clock": "2.4 GHz",
+        "architecture": "aarch64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "None",
+        "vram": "0GB",
+        "cuda_cores": 0,
+        "tensor_cores": 0,
+        "cuda_version": "None",
+        "driver_version": "None"
+      },
+      "TPU": {
+        "model": "None",
+        "performance_tops": 0.0,
+        "version": "None",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "8GB",
+        "type": "LPDDR4X",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SD Card Class 10",
+        "capacity": "64GB",
+        "speed": "0.1 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 765.10885,
+      "throughput_fps": 1.30788,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.79635,
+      "accuracy_top5": 0.94983,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/vit_b_16_static/vit_b_16_int8_static_ts.pt",
+      "disk_size_mb": 86.752
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.6-v8-aarch64"
+    },
+    "timestamp": null
+  }
+]

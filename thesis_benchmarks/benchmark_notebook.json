@@ -1,0 +1,3074 @@
+[
+  {
+    "model_name": "mobilenet_v3_small",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.19760505806669795,
+      "throughput_fps": 5060.599206233214,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6766532607035585,
+      "accuracy_top5": 0.8745354579239424,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mobilenet_v3_small/mobilenet_v3_small_ts.pt",
+      "disk_size_mb": 10.099
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 2.68934578825,
+      "throughput_fps": 581.86468654165,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5065432498465464,
+      "accuracy_top5": 0.784686541897485,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mobilenet_v3_small_dynamic/mobilenet_v3_small_qat_int8_dynamic_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.557761654988186,
+      "throughput_fps": 641.9467296539559,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5190398615282797,
+      "accuracy_top5": 0.7621035483378302,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mobilenet_v3_small_qat/mobilenet_v3_small_qat_int8_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v3_small_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.578295717668,
+      "throughput_fps": 638.5697274419828,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.519185789283752,
+      "accuracy_top5": 0.769398703289322,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mobilenet_v3_small_static/mobilenet_v3_small_qat_int8_statuc_ts.pt",
+      "disk_size_mb": 3.004
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.28959179306363125,
+      "throughput_fps": 3453.136532015852,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.678511429007789,
+      "accuracy_top5": 0.8752736343735682,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mnasnet0_5/mnasnet0_5_ts.pt",
+      "disk_size_mb": 8.877
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 6.458941777677731,
+      "throughput_fps": 154.82412358260075,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.678511429007789,
+      "accuracy_top5": 0.8750699994909128,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mnasnet0_5_dynamic/mnasnet0_5_dynamic_int8_ts.pt",
+      "disk_size_mb": 5.231
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 2.435968402278489,
+      "throughput_fps": 410.51435604199446,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6491880059054116,
+      "accuracy_top5": 0.8591101155627959,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mnasnet0_5_qat/mnasnet0_5_qat_int8_ts.pt",
+      "disk_size_mb": 2.591
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mnasnet0_5_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 2.174210818844373,
+      "throughput_fps": 459.93699936214813,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5303161431553225,
+      "accuracy_top5": 0.7602962887542636,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mnasnet0_5_static/mnasnet0_5_static_int8_ts.pt",
+      "disk_size_mb": 2.595
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.17035422319994625,
+      "throughput_fps": 5870.1215691394455,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6062974087461183,
+      "accuracy_top5": 0.8162704271241664,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/shufflenet_v2_x0_5/shufflenet_v2_x0_5_ts.pt",
+      "disk_size_mb": 5.642
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 3.9566967428651356,
+      "throughput_fps": 403.3285641261865,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6012618635684434,
+      "accuracy_top5": 0.8181537796541338,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/shufflenet_v2_x0_5_dynamic/shufflenet_v2_x0_5_int8_dynamic_ts.pt",
+      "disk_size_mb": 5.642
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.7692763439617638,
+      "throughput_fps": 565.2028318882058,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5621850022908924,
+      "accuracy_top5": 0.7846306572315838,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/shufflenet_v2_x0_5_qat/shufflenet_v2_x0_5_qat_int8_ts.pt",
+      "disk_size_mb": 1.712
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "shufflenet_v2_x0_5_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.8253658095786078,
+      "throughput_fps": 559.2194622194621,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5591475589478356,
+      "accuracy_top5": 0.7885892479883174,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/shufflenet_v2_x0_5/shufflenet_v2_x0_5_ts.pt",
+      "disk_size_mb": 5.642
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.6836443804485538,
+      "throughput_fps": 1462.7488042012112,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7784197933105941,
+      "accuracy_top5": 0.9364913709718474,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b0/efficientnet_b0_ts.pt",
+      "disk_size_mb": 20.893
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 17.880406197609247,
+      "throughput_fps": 55.92714108104032,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7782925215089345,
+      "accuracy_top5": 0.9367204602148348,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b0_dynamic/efficientnet_b0_dynamic_int8_ts.pt",
+      "disk_size_mb": 17.258
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 7.62444780769029,
+      "throughput_fps": 131.15703920110312,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6617115511887186,
+      "accuracy_top5": 0.8713536628824518,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b0_qat/efficientnet_b0_qat_int8_ts.pt",
+      "disk_size_mb": 6.234
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b0_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 7.309252633418487,
+      "throughput_fps": 136.81289321262753,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6193743318230412,
+      "accuracy_top5": 0.807416412971542,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b0_static/efficientnet_b0_static_int8_ts.pt",
+      "disk_size_mb": 6.243
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.4130507105338967,
+      "throughput_fps": 2421.010240382908,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7283765208980298,
+      "accuracy_top5": 0.9101715623886372,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/regnet_x_400mf/regnet_x_400mf_ts.pt",
+      "disk_size_mb": 21.668
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 6.1397745288300065,
+      "throughput_fps": 162.8724304621264,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.728325612177366,
+      "accuracy_top5": 0.9107315583159395,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/regnet_x_400mf_dynamic/regnet_x_400mf_dynamic_int8_ts.pt",
+      "disk_size_mb": 20.542
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 2.6717314587746634,
+      "throughput_fps": 374.2891137938804,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.660591559334114,
+      "accuracy_top5": 0.8718118413684264,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/regnet_x_400mf_qat/regnet_x_400mf_qat_int8_ts.pt",
+      "disk_size_mb": 6.035
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "regnet_x_400mf_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 2.568711063635825,
+      "throughput_fps": 389.30030479355366,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7194420404215242,
+      "accuracy_top5": 0.9064806801405081,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/regnet_x_400mf_static/regnet_x_400mf_static_int8_ts.pt",
+      "disk_size_mb": 6.043
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.5448676413630201,
+      "throughput_fps": 1835.308108035996,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7199256732678307,
+      "accuracy_top5": 0.9033243394593494,
+      "num_samples_eval": 39286
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mobilenet_v2/mobilenet_v2_ts.pt",
+      "disk_size_mb": 13.876
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 13.863897082534333,
+      "throughput_fps": 72.12979107150146,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7199765819884947,
+      "accuracy_top5": 0.9032479763783536,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mobilenet_v2_dynamic/mobilenet_v2_dynamic_int8_ts.pt",
+      "disk_size_mb": 10.231
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 3.261098496779178,
+      "throughput_fps": 306.6451384365267,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6271190754976328,
+      "accuracy_top5": 0.8506592679325968,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mobilenet_v2_qat/mobilenet_v2_qat_int8_ts.pt",
+      "disk_size_mb": 4.012
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "mobilenet_v2_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 3.2186531551881705,
+      "throughput_fps": 310.6889595693443,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.5936975003818155,
+      "accuracy_top5": 0.8230158326121264,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/mobilenet_v2_static/mobilenet_v2_static_int8_ts.pt",
+      "disk_size_mb": 4.016
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.021339823221552,
+      "throughput_fps": 979.1060499783107,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7787761543552411,
+      "accuracy_top5": 0.9380949956727588,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b2/efficientnet_b2_ts.pt",
+      "disk_size_mb": 35.8
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 24.89127518306772,
+      "throughput_fps": 40.174719561183814,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7785725194725857,
+      "accuracy_top5": 0.9381459043934226,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b2_dynamic/efficientnet_b2_dynamic_int8_ts.pt",
+      "disk_size_mb": 31.808
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 12.148759867176654,
+      "throughput_fps": 82.31292830980928,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.639566257699944,
+      "accuracy_top5": 0.8567683144122589,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b2_qat/efficientnet_b2_qat_int8_ts.pt",
+      "disk_size_mb": 10.474
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b2_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 11.991846942622601,
+      "throughput_fps": 83.38999028128868,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6428961971185664,
+      "accuracy_top5": 0.8434765565341343,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b2_static/efficientnet_b2_static_int8_ts.pt",
+      "disk_size_mb": 10.492
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 0.40652096861962794,
+      "throughput_fps": 2459.8977105549416,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6987730998320012,
+      "accuracy_top5": 0.8911571552206893,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/resnet18/resnet18_ts.pt",
+      "disk_size_mb": 44.757
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 12.042648596593024,
+      "throughput_fps": 83.03821140167697,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6979840146617116,
+      "accuracy_top5": 0.8914880619050043,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/resnet18_dynamic/resnet18_dynamic_int8_ts.pt",
+      "disk_size_mb": 43.3
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 6.954062672138141,
+      "throughput_fps": 143.80083228276882,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6628315430433234,
+      "accuracy_top5": 0.8711245736394645,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/resnet18_qat/resnet18_qat_int8_ts.pt",
+      "disk_size_mb": 11.363
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "resnet18_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 6.993660812767564,
+      "throughput_fps": 142.98663128964003,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.6927658707936669,
+      "accuracy_top5": 0.8888408084304842,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/resnet18_static/resnet18_static_int8_ts.pt",
+      "disk_size_mb": 11.366
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.9327156268270917,
+      "throughput_fps": 517.4066924898227,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7937687725907447,
+      "accuracy_top5": 0.9453749427276893,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b4/efficientnet_b4_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.9327156268270917,
+      "throughput_fps": 517.4066924898227,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7937687725907447,
+      "accuracy_top5": 0.9453749427276893,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b4_dynamic/efficientnet_b4_int8_dynamicts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 8.932715626827092,
+      "throughput_fps": 59.4066924898227,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7937687725907447,
+      "accuracy_top5": 0.9453749427276893,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b4_qat/efficientnet_b4_int8_qat_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "efficientnet_b4_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.9327156268270917,
+      "throughput_fps": 50.4066924898227,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7937687725907447,
+      "accuracy_top5": 0.9453749427276893,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/efficientnet_b4_static/efficientnet_b4_int8_static_ts.pt",
+      "disk_size_mb": 75.359
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 1.8567098262085717,
+      "throughput_fps": 538.587121091514,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8226849259278114,
+      "accuracy_top5": 0.9599602911978822,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/convnext_tiny/convnext_tiny_ts.pt",
+      "disk_size_mb": 109.378
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 34.334521998995925,
+      "throughput_fps": 29.12520523889174,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8216412971542025,
+      "accuracy_top5": 0.9592475691085883,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/convnext_tiny_dynamic/convnext_tiny_dynamic_int8_ts.pt",
+      "disk_size_mb": 33.242
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 33.44690226397402,
+      "throughput_fps": 29.898135023317533,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7739398258921754,
+      "accuracy_top5": 0.9375349997454564,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/convnext_tiny_qat/convnext_tiny_qat_int8_ts.pt",
+      "disk_size_mb": 27.926
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_tiny_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 34.2546444142837,
+      "throughput_fps": 29.193121607270694,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.7459654838873899,
+      "accuracy_top5": 0.924451458534847,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/convnext_tiny_static/convnext_tiny_static_int8_ts.pt",
+      "disk_size_mb": 28.597
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 6.85,
+      "throughput_fps": 145.9,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8406,
+      "accuracy_top5": 0.9687,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base/convnext_base_ts.pt",
+      "disk_size_mb": 338.1
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 112.4,
+      "throughput_fps": 8.89,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8395,
+      "accuracy_top5": 0.9678,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_dynamic/convnext_base_int8_dynamic_ts.pt",
+      "disk_size_mb": 92.5
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 105.8,
+      "throughput_fps": 9.45,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.8388,
+      "accuracy_top5": 0.9675,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base/convnext_base_int8_qat_ts.pt",
+      "disk_size_mb": 88.7
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "convnext_base_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset50000",
+      "batch_size": 64,
+      "latency_ms_per_sample": 104.2,
+      "peak_ram_mb": null,
+      "throughput_fps": 9.59,
+      "accuracy_top1": 0.8324,
+      "accuracy_top5": 0.961,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/jaho/maja_ba/Qptimizing-Mobile-Models-for-Edge/zoo/convnext_base_static/convnext_base_int8_static_ts.pt",
+      "disk_size_mb": 88.7
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16",
+    "format": "torchscript",
+    "precision": "fp32",
+    "quantization": {
+      "type": "None",
+      "engine": "None"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": false,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 5.421834210526316,
+      "throughput_fps": 184.4394412210526,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.81072,
+      "accuracy_top5": 0.95318,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/vit_b_16/vit_b_16_ts.pt",
+      "disk_size_mb": 330.285
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_dynamic",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "dynamic",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 118.452109375,
+      "throughput_fps": 8.442231,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.80914,
+      "accuracy_top5": 0.95202,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/vit_b_16_dynamic/vit_b_16_dynamic_int8_ts.pt",
+      "disk_size_mb": 91.423
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_qat",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "qat",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 98.21453125,
+      "throughput_fps": 10.18179,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.80425,
+      "accuracy_top5": 0.94891,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/vit_b_16_qat/vit_b_16_qat_int8_ts.pt",
+      "disk_size_mb": 86.741
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  },
+  {
+    "model_name": "vit_b_16_static",
+    "format": "torchscript",
+    "precision": "int8",
+    "quantization": {
+      "type": "static",
+      "engine": "fbgemm"
+    },
+    "hardware": {
+      "DEVICE_NAME": "Notebook Intel Core i7-12700H NVIDIA RTX 3070 Mobile",
+      "CPU": {
+        "model": "Intel Core i7-12700H",
+        "cores": 20,
+        "base_clock": "2.3 GHz",
+        "max_clock": "4.7 GHz",
+        "architecture": "x86_64"
+      },
+      "CPU_ONLY": true,
+      "GPU": {
+        "model": "NVIDIA RTX 3070 Mobile",
+        "vram": "8GB",
+        "cuda_cores": 5120,
+        "tensor_cores": 160,
+        "cuda_version": "11.4",
+        "driver_version": "470.42.01"
+      },
+      "TPU": {
+        "model": "Edge TPU",
+        "performance_tops": 4.0,
+        "version": "v2",
+        "accelerator": false
+      },
+      "RAM": {
+        "total": "16GB",
+        "type": "DDR4",
+        "filter": false
+      },
+      "Storage": {
+        "type": "SSD",
+        "capacity": "1000GB",
+        "speed": "3.0 GB/s"
+      }
+    },
+    "benchmark": {
+      "dataset": "imagenet_val_subset39286",
+      "batch_size": 64,
+      "latency_ms_per_sample": 96.10421875,
+      "throughput_fps": 10.40537,
+      "peak_ram_mb": null,
+      "accuracy_top1": 0.79641,
+      "accuracy_top5": 0.94312,
+      "num_samples_eval": 50000
+    },
+    "artifact": {
+      "path": "/home/marceldavis/University/BA/FirstZoo/zoo_right/vit_b_16_static/vit_b_16_static_int8_ts.pt",
+      "disk_size_mb": 86.752
+    },
+    "env": {
+      "torch": "2.4.1",
+      "torchvision": "unknown",
+      "os": "Linux-6.14.0-33-generic-x86_64-with-glibc2.17"
+    },
+    "timestamp": null
+  }
+]
